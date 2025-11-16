@@ -1,0 +1,650 @@
+/* Body */
+body {
+  background-color: #FFFFE5;
+  font-family: "Playpen Sans", sans-serif;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #FFFFE5;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 1px;
+}
+
+.logo img {
+  width: 130px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0025B7;
+  font-size: 23px;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: "Vanilla Caramel", cursive;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #FF9641;
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+  background-color: #0025B7;
+  transition: none;
+}
+
+.nav-links li a.active:hover::after {
+  width: 100%;
+}
+
+/* Right Buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quiz-btn {
+  background-color: #FF9641;
+  padding: 8px 20px;
+  border-radius: 40px;
+  color: #FFFFE5;
+  font-size: 23px;
+  font-family: "Vanilla Caramel", sans-serif;
+  text-decoration: none;
+  transition: background 0.3s;
+  box-shadow: 2px 2px 2px #0000005e;
+}
+
+.quiz-btn:hover {
+  background-color: #ff7a0e;
+}
+
+.quiz-btn.active {
+  background-color: #ff7a0e;
+  color: #FFFFE5;
+}
+
+.login-btn {
+  border: 2px solid #0025B7;
+  color: #0025B7;
+  padding: 7px 16px;
+  border-radius: 40px;
+  font-size: 23px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-family: "Vanilla Caramel", sans-serif;
+  cursor: pointer;
+  background: transparent;
+}
+
+.login-btn:hover {
+  background-color: #0025B7;
+  color: #FFFFE5;
+}
+
+.login-btn.active {
+  background-color: #0025B7;
+  color: #FFFFE5;
+}
+
+.quiz-btn.active:hover,
+.login-btn.active:hover {
+  filter: brightness(1.05);
+}
+
+.nav-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: none; /* 默认隐藏 */
+  object-fit: cover;
+  vertical-align: middle;
+  border: 2px solid #ffeeab; /* 可选：给头像加个小白边 */
+  box-shadow: 0 0 4px rgba(0,0,0,0.2); /* 可选阴影 */
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #0025B7;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ---------- Mobile layout + animated menu ---------- */
+@media (max-width: 850px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.01px 16px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 18px;
+    top: 30px;
+    z-index: 1001;
+  }
+
+  .logo {
+    order: -1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 140px;
+    margin: 2px 0;
+    margin-top: 13px;
+  }
+
+  .nav-links,
+  .nav-buttons {
+    width: 100%;
+    overflow: hidden;               
+    max-height: 0;                  
+    opacity: 0;                     
+    transform: translateY(-10px);   
+    transition: max-height 0.45s cubic-bezier(.2,.9,.2,1),
+                opacity 0.35s ease,
+                transform 0.35s ease;
+    display: block;                 
+    background: #FFFFE5;
+  }
+
+  .nav-links ul,
+  .nav-links {
+    padding: 1px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin: 0;
+  }
+
+  .nav-links li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 2px 0;
+  }
+
+  .nav-links li a {
+    display: inline-block;
+    width: auto;
+    font-size: 17px;
+  }
+
+  .nav-buttons {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links.active,
+  .nav-buttons.active {
+    max-height: 480px; 
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links li a,
+  .quiz-btn,
+  .login-btn {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+}
+
+/* Overlay & Login Card */
+.overlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay.active { 
+  display: flex; 
+}
+
+.login-card {
+  position: relative;
+  width: 380px;
+  background: #fffdf3;
+  border-radius: 25px;
+  padding: 40px 30px 30px;
+  text-align: center;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+  animation: fadeInUp 0.35s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.login-card .icon {
+  width: 95px; 
+  height: 95px; 
+  background: #ffedca; 
+  border-radius: 50%;
+  border: 3px solid #fff3d6; 
+  margin: -90px auto 15px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.login-card .icon img {
+  width: 50%;
+  height:60%;
+  margin: 15px auto 15px;
+}
+
+.login-card h2 { 
+  font-family: "Vanilla Caramel", cursive; 
+  color: #2A3792; 
+  margin-bottom: 20px; 
+  font-size: 28px; 
+}
+
+.field { 
+  position: relative; 
+  margin-bottom: 18px; 
+  margin-top: 25px; 
+}
+
+.field input {
+  width: 100%; 
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #e4c78f; 
+  border-radius: 12px;
+  background: #fffef9; 
+  color: #0025B7;
+  font-weight: 500; 
+  font-size: 15px; 
+  outline: none;
+  font-family: "Playpen Sans", sans-serif;
+}
+
+.field input::placeholder { 
+  color:#b7b7b7; 
+  font-weight: 500; 
+}
+
+.field input:focus { 
+  border-color: #ffb457; 
+  box-shadow: 0 0 6px rgba(255,180,87,0.5); 
+  font-weight: 600; 
+}
+
+.field .icon-imgs, .field .icon-img {
+  position: absolute; 
+  top:50%; right:16px; 
+  transform: translateY(-50%);
+  opacity: 0.8; 
+  width: 18px; 
+  height: 21px;
+}
+
+.divider { 
+  display: flex; 
+  align-items:center; 
+  justify-content:center; 
+  color:#b78b56; 
+  font-weight:600; 
+  margin:30px 0; 
+  font-size:13px; 
+}
+
+.divider span { 
+  height:1px; 
+  background:#e4c78f; 
+  width:30%; 
+  margin:0 8px; 
+  display:inline-block; 
+}
+
+.btn-container { 
+  position: relative; 
+  height:50px; 
+}
+
+#login-btn {
+  position:absolute; 
+  left:50%; 
+  transform: translateX(-50%);
+  padding:10px 30px; 
+  margin-top:13px;
+  border:none; 
+  border-radius:25px;
+  background:#2A3792; 
+  color:#FFFAE7;
+  font-weight:bold; 
+  font-size:16px; 
+  cursor:pointer;
+  font-family: "Playpen Sans", sans-serif;
+}
+
+#login-btn:hover { 
+  background:#1d297d; 
+}
+
+/* Google Button */
+.google-btn {
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  gap:8px; 
+  background:#FFE5A3; 
+  color:#0025B7; 
+  font-weight:600;
+  border-radius:12px; 
+  padding:10px 15px; 
+  border:none; 
+  cursor:pointer;
+  width:100%; 
+  font-size:15px; 
+  margin-bottom:20px;
+  font-family: "Playpen Sans", sans-serif;
+}
+
+.google-btn:hover { 
+  background:rgb(255,191,127); 
+}
+
+.google-btn img { 
+  width:20px; 
+  height:20px; 
+}
+
+/* Footer */
+.footer {
+  background-color: #2A3792;
+  color: #FFF1B7;
+  padding: 40px 10px 10px;
+  margin-top: 100px;
+  font-family: "Vanilla Caramel", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ----- Left Section ----- */
+.footer-left {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-left img {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.footer-slogan {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #FFF1B7;
+  font-weight: 400;
+  margin-top: 5px;
+  font-weight: 100;
+}
+
+/* ----- Middle Section ----- */
+.footer-center {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+/* Middle Line */
+.footer-center::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 10%;
+  width: 1.5px;
+  height: 130%;
+  background-color: #FFF1B7;
+}
+
+.footer-center::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 10%;
+  width: 1.5px;
+  height: 130%;
+  width: 0.1%;
+  background-color: #FFF1B7;
+}
+
+.footer-center h3 {
+  font-family: "Vanilla Caramel", cursive;
+  font-size: 18px;
+  color: #FFF1B7;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 100;
+}
+
+/* Linked two-column layout */
+.links-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.links-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-grid li {
+  margin: 6px 0;
+}
+
+.links-grid a {
+  color: #FFFFE5;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: normal;
+  transition: color 0.3s;
+  font-family: "Playpen Sans", cursive;
+}
+
+.links-grid a:hover {
+  color: #FFF1B7;
+}
+
+/* ----- Right Section ----- */
+.footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-right h3 {
+  font-family: "Vanilla Caramel", cursive;
+  font-size: 18px;
+  color: #FFF1B7;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.footer-right p {
+  font-size: 13px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-family: "Playpen Sans", cursive;
+  letter-spacing: normal;
+}
+
+.footer-right span {
+  color: #FFFFE5;
+}
+
+.footer-right a {
+  color: #87DFFF; 
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.social-icons img {
+  width: 40px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #FFF1B7;
+  margin-top: 30px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-center::before,
+  .footer-center::after {
+    display: none;
+  }
+
+  .links-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #FF9641;
+  color: #FFFFE5;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #ff7a0e;
+}
+
+/* ===========================
+   Mobile Override Font Fix
+   automatically replaced Vanilla Caramel with Winky Sans
+   =========================== */
+@media screen and (max-width: 850px) {
+
+  /* Any elements that originally used Vanilla Caramel were changed to Winky Sans on the phone */
+  [style*="Vanilla Caramel"],
+  .nav-links li a,
+  .quiz-btn,
+  .login-btn,
+  .login-card h2,
+  .footer,
+  .footer-center h3,
+  .footer-right h3 {
+    font-family: "Winky Sans", sans-serif !important;
+  }
+}
