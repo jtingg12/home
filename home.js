@@ -183,29 +183,29 @@ googleLoginBtn.addEventListener('click', (e) => {
   google.accounts.id.prompt(); // Trigger Google login window
 })
 
-// 阻止内部链接刷新
+// Prevent internal link refresh
 document.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');
 
-    // 内部页面链接（不是完整 URL，也不是 #）
+    // Internal page links
     if(href && !href.startsWith('http') && href !== '#') {
-      e.preventDefault();           // 阻止刷新
-      loadPage(href);               // 动态加载内容
-      history.pushState({ page: href }, '', href); // 更新 URL
-      setActiveLink(link);          // 更新导航高亮
+      e.preventDefault();           // Prevent refresh
+      loadPage(href);               // Dynamically loaded content
+      history.pushState({ page: href }, '', href); // Update URL
+      setActiveLink(link);          // Update navigation highlighting
     }
   });
 });
 
-// 浏览器前进/后退支持
+// Browser forward/back support
 window.addEventListener('popstate', (e) => {
   if(e.state && e.state.page) {
     loadPage(e.state.page);
   }
 });
 
-// 加载页面内容到 main
+// Load page content to main
 function loadPage(page) {
   fetch(page)
     .then(res => res.text())
@@ -219,7 +219,7 @@ function loadPage(page) {
     });
 }
 
-// 更新导航高亮
+// Update navigation highlighting
 function setActiveLink(link) {
   const navItems = document.querySelectorAll('.nav-links li a');
   navItems.forEach(l => l.classList.remove('active'));
@@ -231,7 +231,7 @@ function setActiveLink(link) {
 // Home Page Specific JavaScript
 document.addEventListener('DOMContentLoaded', function() {
   // Add active class to home link in navigation
-  const homeLink = document.querySelector('.nav-links li a[href="index.html"]');
+  const homeLink = document.querySelector('.nav-links li a[href="home.html"]');
   if (homeLink) {
     homeLink.classList.add('active');
   }
@@ -252,4 +252,101 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Redirect to quiz page');
     });
   }
+});
+
+// Fox Friends Cards Animation
+document.addEventListener('DOMContentLoaded', function() {
+  // Add click effect to individual cards
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      // Add a temporary animation class
+      this.style.transform = this.style.transform + ' scale(0.95)';
+      setTimeout(() => {
+        this.style.transform = this.style.transform.replace(' scale(0.95)', '');
+      }, 300);
+    });
+  });
+});
+
+// Sticky Notes Carousel 
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('stickyCarousel');
+  const items = document.querySelectorAll('.sticky-carousel img');
+  
+  if (items.length === 0) return;
+  
+  function duplicateItems() {
+    const originalItems = Array.from(items);
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      carousel.appendChild(clone);
+    });
+  }
+  
+  // Initialization
+  duplicateItems();
+  
+  const itemWidth = items[0].offsetWidth + 30; // Image width + gap
+  let animation;
+  
+  function startAnimation() {
+    // Reset position
+    carousel.style.transform = 'translateX(0)';
+    carousel.style.transition = 'none';
+    
+    // Start animation
+    setTimeout(() => {
+      carousel.style.transition = 'transform 20s linear infinite';
+      carousel.style.transform = `translateX(-${itemWidth * 10}px)`; 
+    }, 50);
+  }
+  
+  function stopAnimation() {
+    carousel.style.transition = 'none';
+  }
+  
+  function resumeAnimation() {
+    carousel.style.transition = 'transform 20s linear infinite';
+    carousel.style.transform = `translateX(-${itemWidth * 10}px)`;
+  }
+  
+  // Mouse hover control
+  carousel.addEventListener('mouseenter', stopAnimation);
+  carousel.addEventListener('mouseleave', resumeAnimation);
+  
+  // Responsive processing
+  function handleResize() {
+    const newItemWidth = items[0].offsetWidth + 30;
+    if (newItemWidth !== itemWidth) {
+      stopAnimation();
+      setTimeout(startAnimation, 100);
+    }
+  }
+  
+  window.addEventListener('resize', handleResize);
+  
+  // Start animation
+  startAnimation();
+});
+
+//FAQs
+document.addEventListener("DOMContentLoaded", () =>{
+  const questions = document.querySelectorAll(".faq-question");
+  
+  questions.forEach(question => {
+    question.addEventListener("click", ()=> {
+      question.classList.toggle("active");
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector(".icon");
+      
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        icon.textContent = "▾";
+      } else {
+        answer.style.display = "block";
+        icon.textContent ="-";
+      }
+    });
+  });
 });
