@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starkit</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="about.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/vanilla-caramel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/kiara-demo" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background image -->
+<div class="about-bg">
+  <div class="bg-part part1"></div>
+  <div class="bg-part part2"></div>
+  <div class="bg-part part3"></div>
+  <div class="bg-part part4"></div>
+  <div class="bg-part part5"></div>
+  <div class="bg-part part6"></div>
+</div>
+
+<main class="about-container">
+  <!-- Section 1: Title and tilde -->
+  <section class="hero-section">
+
+    <svg width="100%" height="350" viewBox="0 0 1728 350" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- wave path -->
+      <path id="wave"
+        d="
+        M0,240
+        C200,300 350,240 520,200
+        C700,150 820,180 940,250
+        C1080,340 1220,80 1350,150
+        C1500,220 1620,200 1728,180
+        "
+        fill="none"
+        stroke="#94D1FF"
+        stroke-width="70"
+        stroke-linecap="round"
+      />
+    
+      <!-- Infinitely looping scrolling text -->
+      <defs>
+        <path id="text-wave" d="
+          M0,240
+          C200,300 350,240 520,200
+          C700,150 820,180 940,250
+          C1080,340 1220,80 1350,150
+          C1500,220 1620,200 1728,180
+          " 
+        />
+      </defs>
+  
+      <text class="wave-font">
+        <textPath href="#text-wave" startOffset="0%">
+          <animate attributeName="startOffset"
+                   from="-300%" to="0%"
+                   dur="50s"
+                   repeatCount="indefinite" />
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+        </textPath>
+      </text>
+    </svg>
+
+    <!-- Fox icon -->
+    <div class="fox-icons">
+      <div class="fox-icon fox-1">
+        <img src="images/about/f1.png" alt="Ruby Fox">
+      </div>
+      <div class="fox-icon fox-2">
+        <img src="images/about/f2.png" alt="Sunny Fox">
+      </div>
+      <div class="fox-icon fox-3">
+        <img src="images/about/f3.png" alt="Willy Fox">
+      </div>
+      <div class="fox-icon fox-4">
+        <img src="images/about/f4.png" alt="Snowy Fox">
+      </div>
+      <div class="fox-icon fox-5">
+        <img src="images/about/f1.png" alt="Ruby Fox">
+      </div>
+      <div class="fox-icon fox-6">
+        <img src="images/about/f2.png" alt="Sunny Fox">
+      </div>
+      <div class="fox-icon fox-7">
+        <img src="images/about/f3.png" alt="Willy Fox">
+      </div>
+      <div class="fox-icon fox-8">
+        <img src="images/about/f4.png" alt="Snowy Fox">
+      </div>
+    </div>
+
+    <!-- Main title content -->
+    <div class="hero-content">
+      <h1 class="main-title">About <span class="highlight">STARKIT</span></h1>
+      
+      <div class="intro-text">
+        <p>Starkit is an interactive website that helps children discover their unique personalities 
+          through fun quizzes and friendly fox characters.</p>
+        
+        <p>Specially created for high-functioning autistic children aged 10 to 12, Starkit utilizes 
+          gentle stories, colors, and visual design to help<br>children understand their strengths, emotions, and 
+          ways of thinking in a safe and encouraging environment.</p>
+        
+        <p>Each fox represents a personality type from the DISC model (Dominant, Influential, Steady, Conscientious) 
+          — Ruby, Sunny, Willy and<br>Snowy. These friendly foxes guide children to see that everyone learns and grows differently.</p>
+        
+        <p>Starkit invites both children and parents to explore together. Through the quiz, character stories, 
+          and "Star Identity Card," children can build<br>confidence while parents gain deeper insight into their child's personality.</p>
+        
+        <p>Starkit's core is not just a test, but a journey of understanding, acceptance, 
+          and growth, allowing every child to shine in their own way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: What is High-functioning Autism? -->
+  <section class="autism-section">
+    <div class="autism-bg">
+      <img src="images/about/secback.png" alt="Background">
+    </div>
+  
+    <div class="autism-image">
+      <div class="question-icon">
+        <img src="images/about/questionmark.png" alt="Question Mark Icon">
+      </div>
+    </div>
+  
+    <div class="autism-container">
+      <h1 class="autism-title">What is High-Functioning Autism?</h1>
+      
+      <div class="autism-content">
+        <div class="autism-text">
+          <p>Understanding high-functioning autism helps parents recognize their child's unique ways of learning, feeling, and growing.</p>
+          
+          <p>High-functioning autism refers to children on the autism spectrum who demonstrate average or above-average intelligence and language abilities. While they can learn and communicate effectively, they may still face challenges in understanding emotions or social interactions.</p>
+          
+          <p>These children often prefer routines and familiar environments that make them feel safe and in control. Sudden changes or emotionally charged situations can sometimes cause confusion or anxiety.</p>
+          
+          <p>At the same time, they show remarkable strengths such as strong focus, creativity, honesty, and deep curiosity. They often notice small details that others might overlook and feel passionate about topics that truly interest them.</p>
+          
+          <p>Between the ages of 10 and 12, children begin to explore who they are and how they connect with the world. For those with high-functioning autism, this stage can be exciting yet challenging, as they develop a stronger sense of self and learn to understand others.</p>
+          
+          <p>Starkit was created to help these children understand themselves in a calm, creative, and structured way. Through interactive quizzes and friendly fox characters, the website gently guides them to explore their emotions, strengths, and ways of thinking while building confidence and self-expression.</p>
+          
+          <p>For parents, Starkit offers a meaningful way to understand their child's personality and emotional world. It encourages communication, empathy, and shared growth, reminding families that every child shines in their own special way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Why Focus on Children Aged 10 to 12? -->
+  <section class="focus-section">
+    <div class="focus-container">
+      <h1 class="focus-title">Why Focus on Children Aged 10 to 12?</h1>
+      
+      <div class="focus-content">
+        <div class="focus-text">
+          <p>Ages 10 to 12 represent a meaningful stage of growth where children start to ask, "Who am I?" and become more aware of how others see them. It is a time filled with curiosity, self-reflection, and sensitivity to social feedback.</p>
+          
+          <p>For children with high-functioning autism, this stage can be both exciting and challenging.</p>
+          
+          <h2>Common traits include:</h2>
+        </div>
+      </div>
+  
+      <div class="traits-grid">
+        <div class="trait-card">
+          <div class="trait-image">
+            <img src="images/about/traits1.png" alt="Social Communication">
+          </div>
+        </div>
+        
+        <div class="trait-card">
+          <div class="trait-image">
+            <img src="images/about/traits2.png" alt="Routine Preference">
+          </div>
+        </div>
+        
+        <div class="trait-card">
+          <div class="trait-image">
+            <img src="images/about/traits3.png" alt="Sensory Sensitivity">
+          </div>
+        </div>
+        
+        <div class="trait-card">
+          <div class="trait-image">
+            <img src="images/about/traits4.png" alt="Special Interests">
+          </div>
+        </div>
+      </div>
+  
+      <div class="focus-conclusion">
+        <p>As children approach adolescence, their emotional and cognitive worlds expand rapidly. With proper guidance and
+           supportive tools, they can learn to understand themselves better, build confidence, and grow toward greater independence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: What Does the Test Do and How Does It Work? -->
+  <section class="test-section">
+    <div class="test-bg">
+      <img src="images/about/4thback.png" alt="Background"> 
+    </div>
+    
+    <div class="wave-container">
+      <div class="wave-line"></div>
+      <div class="scrolling-text">
+        <span class="scrolling-content4">
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+        </span>
+        <span class="scrolling-content4">
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+        </span>
+      </div>
+    </div>
+    
+    <h2 class="fourth-title">What Does the Test Do and How Does It Work?</h2>
+
+    <div class="title-decoration">
+      <img src="images/about/4th.line.png" alt="Title Decoration">
+    </div>
+  
+    <div class="test-content">
+      <div class="ribbon-left">
+        <img src="images/about/4th.ribbons1.png" alt="Left Ribbon">
+      </div>
+      
+      <div class="test-image">
+        <img src="images/about/4th.section.png" alt="Test Description">
+      </div>
+      
+      <div class="ribbon-right">
+        <img src="images/about/4th.ribbons2.png" alt="Right Ribbon">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 & 6 -->
+  <section class="section-five-six">
+    <!-- Scroll Lines as Background -->
+    <div class="scroll-lines-background">
+      <div class="scroll-line line-1">
+        <div class="scrolling-content">
+          <span>
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+          </span>
+        </div>
+      </div>
+      
+      <div class="scroll-line line-2">
+        <div class="scrolling-content reverse">
+          <span>
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+          </span>
+        </div>
+      </div>
+      
+      <div class="scroll-line line-3">
+        <div class="scrolling-content">
+          <span>
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+          </span>
+        </div>
+      </div>
+      
+      <div class="scroll-line line-4">
+        <div class="scrolling-content reverse">
+          <span>
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+          </span>
+        </div>
+      </div>
+      
+      <div class="scroll-line line-5">
+        <div class="scrolling-content">
+          <span>
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+            ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Why Is This Helpful for Children? -->
+    <div class="section-five-content">
+      <div class="section-five-container">
+        <div class="section-five-image">
+          <img src="images/about/5th.png" alt="Why Is This Helpful for Children" class="desktop-image">
+          <img src="images/about/5th.mobile.png" alt="Why Is This Helpful for Children" class="mobile-image">
+        </div>
+      </div>
+    </div>
+  
+    <!-- Section 6: How Starkit Helps Parents & What Parents Can Do Next -->
+    <div class="section-six-content">
+      <div class="section-six-container">
+        <div class="section-six-image">
+          <img src="images/about/6th.png" alt="Starkit Parents Guide" class="desktop-image">
+          <img src="images/about/6th.mobile.png" alt="Starkit Parents Guide" class="mobile-image">
+          
+          <!-- Gif icons -->
+          <div class="gif-icon helps-parents-gif">
+            <img src="images/about/parents1.gif" alt="Helps Parents Icon">
+          </div>
+          <div class="gif-icon parents-next-gif">
+            <img src="images/about/parents2.gif" alt="Parents Next Icon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Limitations and Important Disclaimers for Parents -->
+  <section class="section-seven">
+    <div class="section-seven-bg">
+      <img src="images/about/7thback.png" alt="Section 7 Background">
+    </div>
+    
+    <!-- Scroll Line with Text -->
+    <div class="section-seven-wave-container">
+      <div class="section-seven-wave-line"></div>
+      <div class="section-seven-scrolling-text">
+        <span class="section-seven-scrolling-content">
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+        </span>
+        <span class="section-seven-scrolling-content">
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY 
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY  
+          ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY ✦ RUBY ✦ SUNNY ✦ WILLY ✦ SNOWY     
+        </span>
+      </div>
+    </div>
+  
+    <!-- Title with Warning Icons -->
+    <div class="section-seven-title-container">
+      <div class="warning-icon warning-left">
+        <img src="images/about/warning.gif" alt="Warning Icon">
+      </div>
+      
+      <h2 class="section-seven-title">Limitations and Important Disclaimers for Parents</h2>
+      
+      <div class="warning-icon warning-right">
+        <img src="images/about/warning.gif" alt="Warning Icon">
+      </div>
+    </div>
+  
+    <!-- Content Image -->
+    <div class="section-seven-content">
+      <div class="section-seven-image">
+        <img src="images/about/7th.png" alt="Limitations and Disclaimers" class="desktop-image">
+        <img src="images/about/7th.mobile.png" alt="Limitations and Disclaimers" class="mobile-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: A Message to Parents -->
+<section class="section-eight">
+  <div class="section-eight-bg">
+    <img src="images/about/8thback.png" alt="Section 8 Background">
+  </div>
+
+  <!-- Title with Message Icons -->
+  <div class="section-eight-title-container">
+    <div class="message-icon message-left">
+      <img src="images/about/message.gif" alt="Message Icon">
+    </div>
+    
+    <h2 class="section-eight-title">A Message to Parents</h2>
+    
+    <div class="message-icon message-right">
+      <img src="images/about/message.gif" alt="Message Icon">
+    </div>
+  </div>
+
+  <!-- Content Text -->
+  <div class="section-eight-content">
+    <div class="section-eight-text">
+      <p>Every child is a small universe, full of feelings, curiosity, and endless potential. Some shine brightly and confidently, while others grow quietly in their own rhythm. No matter the pace, each child's light is equally precious.</p>
+      
+      <p>Starkit's design philosophy is to make self-discovery a gentle and joyful journey, helping children and parents better understand each other through stories, imagination, and care.</p>
+      
+      <p>We hope this journey helps you see your child not only for who they are today, but for who they are becoming. Take time to listen, celebrate every effort, and walk beside them with patience and love.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Navigation Bar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="home.html"><img src="images/logo.png" alt="Starkit Logo"></a>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Nav Buttons-->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="FoxFriends.html">Fox Friends</a></li>
+      <li><a href="postit!.html">Post It!</a></li>
+    </ul>
+
+    <!-- Nav Buttons (Right Side) -->
+    <div class="nav-buttons">
+      <a href="quiz.html" class="quiz-btn">Take the Quiz</a>
+      <a href="#" class="login-btn">Log In</a>
+      <img id="nav-avatar" class="nav-avatar" src="" alt="User Avatar">
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Login Overlay -->
+<div class="overlay" id="overlay">
+  <div class="login-card">
+    <div class="icon">
+      <img src="images/login/user.png" alt="User Icon">
+    </div>
+    <h2>Log In</h2>
+    <div class="msg" id="msg"></div>
+
+    <form id="loginForm" onsubmit="return false;">
+      <div class="field">
+        <input type="text" id="uname" placeholder="Email">
+        <img src="images/login/user.png" class="icon-imgs">
+      </div>
+      <div class="field">
+        <input type="password" id="pass" placeholder="Password">
+        <img src="images/login/pw.png" class="icon-img">
+      </div>
+
+      <div class="divider">
+        <span></span> OR <span></span>
+      </div>
+
+      <button class="google-btn" id="googleLogin">
+        <img src="images/login/google.png" alt="Google Logo"> Sign in with Google
+      </button>
+
+      <div class="btn-container">
+        <input type="submit" id="login-btn" value="Log In">
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <main style="height: 6600px;"></main> -->
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left: Logo + Slogan -->
+    <div class="footer-left">
+      <img src="images/logo.png" alt="Starkit Logo">
+      <p class="footer-slogan">
+        “Discover your inner fox,<br>guided by your star.”
+      </p>
+    </div>
+
+    <!-- Middle: Quick Links -->
+    <div class="footer-center">
+      <h3>Quick Links</h3>
+      <div class="links-grid">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <ul>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="FoxFriends.html">Fox Friends</a></li>
+        </ul>
+        <ul>
+          <li><a href="postit!.html">Post It!</a></li>
+          <li><a href="#">⋆˚☆˖°⋆｡° ✮˖.˚</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right: Contact Us -->
+    <div class="footer-right">
+      <h3>Contact Us</h3>
+      <p><span>Email:</span> <a href="mailto:starkit.support@gmail.com">starkit.support@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="#"><img src="images/footer/ins.png" alt="Instagram"></a>
+        <a href="#"><img src="images/footer/xhs.png" alt="Xiaohongshu"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Starkit. All Rights Reserved.</div>
+</footer>
+
+<!-- Google Sign In -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<script>
+  // Google Log In
+  window.onload = function() {
+    google.accounts.id.initialize({
+      client_id: "53254119460-3hj1559jtb4c2kthhqjijokjevjk8ua4.apps.googleusercontent.com",
+      callback: handleCredentialResponse
+    });
+  };
+</script>
+
+<div id="g_id_onload"
+     data-client_id="53254119460-3hj1559jtb4c2kthhqjijokjevjk8ua4.apps.googleusercontent.com"
+     data-callback="handleCredentialResponse">
+</div>
+
+<!-- Hidden Google login information container -->
+<div id="user-info" style="display:none;">
+  <img id="avatar" src="" alt="Avatar">
+  <p id="name"></p>
+  <p id="email"></p>
+</div>
+
+<!-- JavaScript -->
+<script src="home.js"></script>
+<script src="about.js"></script>
+
+</body>
+</html>
